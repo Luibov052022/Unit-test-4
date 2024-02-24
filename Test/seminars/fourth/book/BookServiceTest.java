@@ -14,9 +14,8 @@ class BookServiceTest {
 
     @Test
     void findBook() {
-
-        Book result = new Book("1", "Book1", "Author1");
         String id = "1";
+        Book result = b.findById(id);
 
         when(serv.findBookById(id)).thenReturn(result);
 
@@ -25,6 +24,7 @@ class BookServiceTest {
     @Test
     void findAllBooks() {
         ArrayList<Book> result = new ArrayList<Book>();
+        result.addAll(b.findAll());
 
         when(serv.findAllBooks()).thenReturn(result);
 
