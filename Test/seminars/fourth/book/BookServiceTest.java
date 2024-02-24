@@ -24,8 +24,8 @@ class BookServiceTest {
     @Test
     void findAllBooks() {
         ArrayList<Book> result = new ArrayList<Book>();
-        result.addAll(b.findAll());
 
+        result.addAll(b.findAll());
         when(serv.findAllBooks()).thenReturn(result);
 
         assertEquals(serv.findAllBooks(), result);
